@@ -144,4 +144,4 @@ Projeto focado na transformação de dados em informação estratégica para apo
 
 O arquivo Power BI (.pbix) pode ser baixado aqui:
 
-👉 https://github.com/valdanosimao/analise-arrecadacao-bi/releases/download/v1.0/Analise.de.Arrecadacao.Publica.e.Eficiencia.Regional.pbix
+👉 [Download do Dashboard](https://github.com/valdanosimao/analise-arrecadacao-bi/releases/download/v1.0/Analise.de.Arrecadacao.Publica.e.Eficiencia.Regional.pbix)
