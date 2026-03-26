@@ -120,7 +120,7 @@ DIVIDE(
 ![Analise](images/analise.png)
 
 ### Filtros
-![Filtros](images/filtros.png)
+![Filtros](images/filtro.png)
 
 ---
 
