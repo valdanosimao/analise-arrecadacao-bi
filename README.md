@@ -94,3 +94,11 @@ Este dashboard permite:
 ## 📌 Conclusão
 
 Projeto focado na transformação de dados em informação estratégica para apoio à decisão.
+
+---
+
+## 📥 Download do Projeto
+
+O arquivo Power BI (.pbix) pode ser baixado aqui:
+
+👉 [Download do Dashboard]
