@@ -26,9 +26,9 @@ Desenvolvimento de um dashboard interativo em Power BI permitindo:
 
 O dashboard foi organizado em três camadas:
 
-- **Visão Executiva (Home)**
-- **Análise Detalhada**
-- **Filtros Dinâmicos**
+- Visão Executiva (Home)
+- Análise Detalhada
+- Filtros Dinâmicos
 
 ---
 
@@ -68,6 +68,49 @@ O dashboard foi organizado em três camadas:
 
 ---
 
+As medidas foram desenvolvidas utilizando DAX com foco em análise temporal, comparação de desempenho e suporte à tomada de decisão.
+
+---
+
+## 🧮 Medidas DAX Utilizadas
+
+### Total de Arrecadação
+Valor Total Arrecadação = 
+SUM(f_arrecadacao_consolidada[Valor Arrecadado])
+
+---
+
+### Participação (%) por Regional
+% Arrecadação = 
+DIVIDE(
+    [Valor Total Arrecadação],
+    CALCULATE(
+        [Valor Total Arrecadação],
+        ALLSELECTED(f_arrecadacao_consolidada[Regional])
+    )
+)
+
+---
+
+### Crescimento Ano a Ano (YoY)
+Crescimento % YoY = 
+VAR ValorAtual =
+    [Valor Total Arrecadação]
+
+VAR ValorAnterior =
+    CALCULATE(
+        [Valor Total Arrecadação],
+        SAMEPERIODLASTYEAR('d_calendario'[Data])
+    )
+
+RETURN
+DIVIDE(
+    ValorAtual - ValorAnterior,
+    ValorAnterior
+)
+
+---
+
 ## 📷 Dashboard
 
 ### Página Principal
@@ -101,10 +144,4 @@ Projeto focado na transformação de dados em informação estratégica para apo
 
 O arquivo Power BI (.pbix) pode ser baixado aqui:
 
-👉 [Download do Dashboard] (---
-
-## 📥 Download do Projeto
-
-O arquivo Power BI (.pbix) pode ser baixado aqui:
-
-👉 [Download do Dashboard](https://github.com/valdanosimao/analise-arrecadacao-bi/releases/download/v1.0/Analise.de.Arrecadacao.Publica.e.Eficiencia.Regional.pbix)
+👉 https://github.com/valdanosimao/analise-arrecadacao-bi/releases/download/v1.0/Analise.de.Arrecadacao.Publica.e.Eficiencia.Regional.pbix
